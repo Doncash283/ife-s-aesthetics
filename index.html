@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ife Aesthetics</title>
+
+  <meta
+    name="description"
+    content="Ife Aesthetics — beauty, fashion, accessories and home decor."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>CURATED IN LAGOS · DELIVERED WITH CARE</span>
+    <span>Delivery details confirmed personally on WhatsApp</span>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+
+    <a href="#" class="brand">
+      <span class="brand-icon">i</span>
+
+      <span>
+        <strong>Ife</strong>
+        <small>AESTHETICS</small>
+      </span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#shop">Shop all</a>
+      <a href="#beauty">Beauty</a>
+      <a href="#fashion">Fashion</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#home-decor">Home Decor</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="#admin">Owner sign in</a>
+
+      <button id="cartBtn" class="bag-button">
+        Bag
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          • A LAGOS-BORN EDIT FOR LIVING BEAUTIFULLY
+        </p>
+
+        <h1>
+          A little more
+          <em>you</em>,
+          every day.
+        </h1>
+
+        <p class="hero-text">
+          Thoughtful finds for your rituals, your wardrobe
+          and the home you make your own.
+        </p>
+
+        <a href="#shop" class="button">
+          Explore the collection →
+        </a>
+
+      </div>
+
+      <div class="hero-image"></div>
+
+    </section>
+
+
+    <!-- CATEGORY CARDS -->
+    <section class="categories" id="shop">
+
+      <a
+        href="#products"
+        class="category-card beauty"
+        data-filter="Beauty"
+        id="beauty"
+      >
+        <span>RITUALS WORTH KEEPING</span>
+        <strong>Beauty →</strong>
+      </a>
+
+      <a
+        href="#products"
+        class="category-card fashion"
+        data-filter="Fashion"
+        id="fashion"
+      >
+        <span>PIECES WITH PRESENCE</span>
+        <strong>Fashion →</strong>
+      </a>
+
+      <a
+        href="#products"
+        class="category-card accessories"
+        data-filter="Accessories"
+        id="accessories"
+      >
+        <span>THE FINISHING TOUCHES</span>
+        <strong>Accessories →</strong>
+      </a>
+
+      <a
+        href="#products"
+        class="category-card home"
+        data-filter="Home Decor"
+        id="home-decor"
+      >
+        <span>MAKE ROOM FOR LOVELY</span>
+        <strong>Home Decor →</strong>
+      </a>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="catalog" id="products">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="eyebrow">WORTH A CLOSER LOOK</p>
+
+          <h2>
+            The Ife favourites.
+          </h2>
+        </div>
+
+        <div class="filters">
+
+          <button
+            class="filter active"
+            data-filter="All"
+          >
+            All
+          </button>
+
+          <button
+            class="filter"
+            data-filter="Beauty"
+          >
+            Beauty
+          </button>
+
+          <button
+            class="filter"
+            data-filter="Fashion"
+          >
+            Fashion
+          </button>
+
+          <button
+            class="filter"
+            data-filter="Accessories"
+          >
+            Accessories
+          </button>
+
+          <button
+            class="filter"
+            data-filter="Home Decor"
+          >
+            Home Decor
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="productGrid"
+        class="product-grid"
+      ></div>
+
+      <div
+        id="empty"
+        class="empty-products"
+        hidden
+      >
+        <h3>Nothing here just yet.</h3>
+
+        <p>
+          Check back soon. We are always finding
+          something lovely.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section class="story">
+
+      <div class="story-image"></div>
+
+      <div class="story-content">
+
+        <p class="eyebrow">
+          A NOTE ON GETTING DRESSED
+        </p>
+
+        <h2>
+          Wear what feels like
+          <em>you.</em>
+        </h2>
+
+        <p>
+          The best pieces don't ask you to be anyone else.
+          They simply help you show up as yourself,
+          a little more brightly.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- SHOPPING CART -->
+  <aside
+    id="cartPanel"
+    class="cart-panel"
+  >
+
+    <button
+      id="closeCart"
+      class="close-cart"
+    >
+      ×
+    </button>
+
+    <h2>Your bag</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+
+      <span>Total</span>
+
+      <strong id="cartTotal">
+        ₦0
+      </strong>
+
+    </div>
+
+    <button
+      id="checkoutBtn"
+      class="button full-width"
+    >
+      Order on WhatsApp
+    </button>
+
+  </aside>
+
+
+  <!-- OWNER AREA -->
+  <section
+    id="admin"
+    class="admin-section"
+  >
+
+    <p class="eyebrow">
+      IFÉ AESTHETICS
+    </p>
+
+    <h2>Owner area</h2>
+
+    <p>
+      Product management will be available through
+      the protected owner dashboard.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="brand">
+
+      <span class="brand-icon">i</span>
+
+      <span>
+        <strong>Ife</strong>
+        <small>AESTHETICS</small>
+      </span>
+
+    </div>
+
+    <p>
+      Beauty, adornment & living well.
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
