@@ -60,7 +60,7 @@ async function loadProducts() {
   try {
 
     const response = await fetch(
-      `${window.SUPABASE_URL}/rest/v1/products?select=*&active=eq.true&order=created_at.desc`,
+      `${window.SUPABASE_URL}/rest/v1/ife_products?select=*&archived=eq.false&order=created_at.desc`,
       {
         headers: {
           apikey: window.SUPABASE_PUBLISHABLE_KEY,
@@ -178,7 +178,7 @@ function addToCart(productId) {
     );
 
 
-  if (!product) return;
+  if (!product) return;  if (Number(product.stock) <= 0) {   alert("Sorry, this product is currently out of stock.");   return; }
 
 
   state.cart.push(product);
